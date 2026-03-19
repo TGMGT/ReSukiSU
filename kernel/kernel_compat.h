@@ -19,7 +19,7 @@
      (LINUX_VERSION_CODE < KERNEL_VERSION(4, 10, 0))) ||                       \
     ((LINUX_VERSION_CODE >= KERNEL_VERSION(4, 14, 0)) &&                       \
      (LINUX_VERSION_CODE < KERNEL_VERSION(4, 15, 0)))
-#if defined(HISI_SELINUX_EBITMAP_RO) && !defined(CONFIG_IS_HISI_HM2)
+#if defined(HISI_SELINUX_EBITMAP_RO) && !defined(KSU_COMPAT_IS_HISI_HM2)
 #define KSU_COMPAT_IS_HISI_LEGACY 1
 #endif
 #endif
@@ -29,7 +29,7 @@
 */
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 14, 0)) &&                        \
     (LINUX_VERSION_CODE < KERNEL_VERSION(4, 15, 0))
-#if defined(CONFIG_IS_HISI_HM2)
+#if defined(KSU_COMPAT_IS_HISI_HM2)
 #define KSU_COMPAT_IS_HISI_LEGACY_HM2 1
 #endif
 #endif

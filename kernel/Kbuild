@@ -218,7 +218,7 @@ $(info -- $(REPO_NAME)/compat/samsung: SEC_SELINUX_PORTING_COMMON found)
 ccflags-y += -DSAMSUNG_SELINUX_PORTING
 endif
 
-## For Huawei EMUI10+ Cheak  
+## For Huawei EMUI10+ check  
 # Scan Kernel Tree to find CONFIG_HKIP_SELINUX_PROT in ebitmap.h
 ifeq ($(shell grep -q "CONFIG_HKIP_SELINUX_PROT" $(srctree)/security/selinux/ss/ebitmap.h 2>/dev/null; echo $$?),0)
   $(info -- $(REPO_NAME): CONFIG_HKIP_SELINUX_PROT found!)
