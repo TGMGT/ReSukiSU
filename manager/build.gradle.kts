@@ -15,9 +15,7 @@ val managerVersionCode by extra(30000 + getGitCommitCount() + 700)
 val managerVersionName by extra(getGitDescribe())
 
 fun getGitCommitCount(): Int {
-    return providers.exec {
-        commandLine("git", "rev-list", "--count", "HEAD")
-    }.standardOutput.asText.get().trim().toInt()
+    return 1
 }
 
 fun getGitDescribe(): String {
